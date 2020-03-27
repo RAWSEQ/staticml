@@ -1,0 +1,7 @@
+/node_modules
+/public
+/data
+/template
+/*-linux
+/*-macos
+/*-win.exe
