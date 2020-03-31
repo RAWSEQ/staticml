@@ -1,15 +1,24 @@
 const fs = require('fs');
 let context = {};
 
-//settings
-context.settings = {};
+//settings (default)
+//overrides by ./data/settings.json
+context.settings = {
+    encoding: 'utf-8',
+    //encoding.data
+    //encoding.data.[extension]
+    //encoding.template
+    sml_prefix: 'sml',
+};
 
 //controller
-require('./lib/do_read_data')(context, () => {
-    require('./lib/do_read_template')(context, () => {
-        require('./lib/do_pagination')(context, () => {
-            require('./lib/do_convert')(context, () => {
-                require('./lib/do_publish')(context);
+require('./lib/do_read_settings')(context, () => {
+    require('./lib/do_read_data')(context, () => {
+        require('./lib/do_read_template')(context, () => {
+            require('./lib/do_pagination')(context, () => {
+                require('./lib/do_convert')(context, () => {
+                    require('./lib/do_publish')(context);
+                });
             });
         });
     });
