@@ -9,6 +9,7 @@ context.settings = {
     //encoding.data.[extension]
     //encoding.template
     sml_prefix: 'sml',
+    target_extension: ['html', 'htm'],
 };
 
 //controller
