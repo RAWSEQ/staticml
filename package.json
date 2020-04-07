@@ -7,7 +7,7 @@
   },
   "main": "staticml.js",
   "scripts": {
-    "test": "echo \"OK\" && exit 0"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,7 @@
     "recursive-readdir": "^2.2.2",
     "strip-bom": "^4.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^25.2.4"
+  }
 }
