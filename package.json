@@ -16,7 +16,8 @@
     "csv": "^5.3.2",
     "jsdom": "^15.2.0",
     "recursive-readdir": "^2.2.2",
-    "strip-bom": "^4.0.0"
+    "strip-bom": "^4.0.0",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "jest": "^25.2.4"
