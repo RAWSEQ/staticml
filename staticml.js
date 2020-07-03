@@ -21,7 +21,6 @@ require('./lib/do_read_settings')(context, () => {
             require('./lib/do_pagination')(context, () => {
                 require('./lib/do_pre_convert')(context, () => {
                     require('./lib/do_publish')(context, () => {
-                        done();
                     });
                 });
             });
@@ -36,7 +35,6 @@ require('./lib/do_read_settings')(context, () => {
             require('./lib/do_pagination')(context, () => {
                 require('./lib/do_convert')(context, () => {
                     require('./lib/do_publish')(context, () => {
-                        done();
                     });
                 });
             });
