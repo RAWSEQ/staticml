@@ -13,6 +13,45 @@ context.settings = {
 
 // generate sample
 
+//controller
+
+//pre convert
+test('staticml', done => {
+    require('../lib/do_read_settings')(context, () => {
+        require('../lib/do_read_data')(context, () => {
+            require('../lib/do_read_template')(context, () => {
+                require('../lib/do_pagination')(context, () => {
+                    require('../lib/do_pre_convert')(context, () => {
+                        require('../lib/do_publish')(context, () => {
+                            done();
+                        });
+                    });
+                });
+            });
+        });
+    });
+});
+
+//publish
+test('staticml', done => {
+    require('../lib/do_read_settings')(context, () => {
+        require('../lib/do_read_data')(context, () => {
+            require('../lib/do_read_template')(context, () => {
+                require('../lib/do_pagination')(context, () => {
+                    require('../lib/do_convert')(context, () => {
+                        require('../lib/do_publish')(context, () => {
+                            done();
+                        });
+                    });
+                });
+            });
+        });
+    });
+});
+
+/*
+// unit test
+
 test('do_read_settings', done => {
     require('../lib/do_read_settings')(context, () => {
         done();
@@ -52,5 +91,6 @@ test('do_publish', done => {
         done();
     });
 });
+*/
 
 // clean up

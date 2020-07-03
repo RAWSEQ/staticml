@@ -13,12 +13,31 @@ context.settings = {
 };
 
 //controller
+
+//pre convert
+require('./lib/do_read_settings')(context, () => {
+    require('./lib/do_read_data')(context, () => {
+        require('./lib/do_read_template')(context, () => {
+            require('./lib/do_pagination')(context, () => {
+                require('./lib/do_pre_convert')(context, () => {
+                    require('./lib/do_publish')(context, () => {
+                        done();
+                    });
+                });
+            });
+        });
+    });
+});
+
+//publish
 require('./lib/do_read_settings')(context, () => {
     require('./lib/do_read_data')(context, () => {
         require('./lib/do_read_template')(context, () => {
             require('./lib/do_pagination')(context, () => {
                 require('./lib/do_convert')(context, () => {
-                    require('./lib/do_publish')(context);
+                    require('./lib/do_publish')(context, () => {
+                        done();
+                    });
                 });
             });
         });
