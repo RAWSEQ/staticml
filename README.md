@@ -200,7 +200,7 @@ ex: filename.xlsx / Sheet：sheetname
 **Template(input):**
 pagename_[page].html
 ```html
-<meta sml-pagination-src="data/filename.xlsx/sheetname" sml-pagination-page-cnt="5">
+<meta sml-pagination-src="data/filename.xlsx/sheetname" sml-pagination-page-cnt="5"> // シートの一覧を元に、1ページに5件で一覧表示。（溢れたら次ページ）
 
 <div sml-loop="data/filename.xlsx/sheetname">
     ...
@@ -211,7 +211,7 @@ pagename_[page].html
 </button>
 <button sml-attr="onclick/[link]:pagename_{data/pagination/next}.html" sml-if="data/pagination/is_next" class="primary-button center-block" onclick="location.href='[link]'">
     NEXT　＞＞
-</button>
+</button> // ページ送り
 ```
 
 ## インクルード機能
