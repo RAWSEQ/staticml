@@ -1,12 +1,13 @@
 {
   "name": "staticml",
-  "version": "1.0.0",
+  "version": "0.1",
   "description": "Static Template Engine",
   "repository": {
     "url": "https://github.com/RAWSEQ/statcml"
   },
   "main": "staticml.js",
   "scripts": {
+    "staticml" : "node staticml.js",
     "test": "jest",
     "pkg": "pkg staticml.js"
   },
