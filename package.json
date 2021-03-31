@@ -1,9 +1,9 @@
 {
   "name": "staticml",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Static Template Engine",
   "repository": {
-    "url": "https://github.com/RAWSEQ/statcml"
+    "url": "https://github.com/RAWSEQ/staticml"
   },
   "main": "staticml.js",
   "scripts": {
