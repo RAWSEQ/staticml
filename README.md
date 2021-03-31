@@ -55,13 +55,13 @@ Excel(filename.xlsx)でヘッダーを「key, value」とした場合、 `data/f
 Template(input):
 ```
 <div sml-html="replacement">...</div>
-<a sml-html="data/filename.xlsx/title">...</a>  // ex: title = abc 
+<a sml-html="data/filename.xlsx/sheetname/title">...</a>  // ex: title = abc 
 ```
 
 Public(output):
 ```
 <div sml-html="replacement">replacement</div>
-<a sml-html="data/filename.xlsx/title">abc</a>
+<a sml-html="data/filename.xlsx/sheetname/title">abc</a>
 ```
 
 ### sml-append, sml-prepend
