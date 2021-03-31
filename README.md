@@ -230,3 +230,7 @@ pagename_[page].html
 ```
 
 pagename.html 以外は pagename.htmlの該当エリアのhtmlが上書きされる
+
+## License
+
+MIT License
