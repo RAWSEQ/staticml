@@ -234,3 +234,4 @@ pagename.html 以外は pagename.htmlの該当エリアのhtmlが上書きされ
 ## License
 
 MIT License
+(RAWSEQ)
