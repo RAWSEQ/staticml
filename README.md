@@ -30,7 +30,7 @@ npm run staticml
 
 ## フォルダ構成
 
-### [ルート]/data
+### /data
 
 Excel(xlsx), json, yml 対応
 
@@ -38,11 +38,11 @@ Excel(filename.xlsx)でヘッダーを「key, value」とした場合、 `data/f
 
 表要素としての呼び出しはシートの表現がまるまる利用可能。 `sml-loop` , `sml-pagination` で利用する
 
-### [ルート]/template
+### /template
 
 入力。元となるhtmlテンプレートをセットする
 
-### [ルート]/pubilc
+### /pubilc
 
 出力。データが反映されたhtmlが発行される
 
@@ -101,6 +101,7 @@ Public(output):
 ### sml-loop
 
 表をループする。`sml-loop` にループしたいシート名をセットすると、データが変数のルート領域 `data/***` にセットされる
+
 `sml-item` がセットされた最初の要素のみを利用してループし、それ以外は無視（削除）される
 
 `sml-loop-ref` を利用してデータリファレンスも可能（説明は準備中）
@@ -199,7 +200,7 @@ pagename_[page].html
 
 ## インクルード機能
 
-## <!-- #sml-include-[pagename]/[key] -->
+## &lt;!-- #sml-include-[pagename]/[key] -->
 
 ページ記載の全てにおいて対応する[pagename]の該当箇所に置き換える
 
