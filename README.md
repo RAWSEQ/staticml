@@ -6,7 +6,7 @@ Web(html)静的発行ユーティリティ(開発中)
 
 README整備中・・
 
-![Image](https://ltside.com/filename/img/sml-concept.png)
+![Image](https://ltside.com/brmer/img/sml-concept.png)
 
 ## 導入方法
 
