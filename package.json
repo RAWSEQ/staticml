@@ -7,7 +7,7 @@
   },
   "main": "staticml.js",
   "scripts": {
-    "staticml" : "node staticml.js",
+    "staticml": "node staticml.js",
     "test": "jest",
     "pkg": "pkg staticml.js"
   },
@@ -20,7 +20,9 @@
     "recursive-readdir": "^2.2.2",
     "strip-bom": "^4.0.0",
     "xlsx": "^0.16.3",
-    "yaml": "^1.10.0"
+    "yaml": "^1.10.0",
+    "y18n": ">=4.0.1",
+    "node-notifier": ">=8.0.1"
   },
   "devDependencies": {
     "jest": "^25.2.4"
