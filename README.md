@@ -52,14 +52,14 @@ Excel(filename.xlsx)でヘッダーを「key, value」とした場合、 `data/f
 
 タグにセットするとそのタグ内のhtmlが置き換わる
 
-Template(input):
-```
+**Template(input):**
+```html
 <div sml-html="replacement">...</div>
 <a sml-html="data/filename.xlsx/sheetname/title">...</a>  // ex: title = abc 
 ```
 
-Public(output):
-```
+**Public(output):**
+```html
 <div sml-html="replacement">replacement</div>
 <a sml-html="data/filename.xlsx/sheetname/title">abc</a>
 ```
@@ -72,14 +72,14 @@ sml-htmlと同様。appendは追記, prependは前方追記
 
 要素を置き換える。部分置換も可能
 
-Template(input):
-```
+**Template(input):**
+```html
 <div sml-attr="test-a:data1;test-b:data2">...</div>
 <div sml-attr="test-c/repl:done" test-c="data3,repl,ace">...</div>
 ```
 
-Public(output):
-```
+**Public(output):**
+```html
 <div sml-attr="test1:data1;test2:data2" test-a="data1" test-b="data2">...</div>
 <div sml-attr="test-c/repl:done" test-c="data3,done,ace">...</div>
 ```
@@ -88,13 +88,13 @@ Public(output):
 
 クラス要素を操作する
 
-Template(input):
-```
+**Template(input):**
+```html
 <div sml-class="add:abc;remove:def" class="def ghy">
 ```
 
-Public(output):
-```
+**Public(output):**
+```html
 <div sml-class="add:abc;remove:def" class="ghy abc">
 ```
 
@@ -112,8 +112,8 @@ ex: filename.xlsx / Sheet：sheetname
 |title1|abc|
 |title2|def|
 
-Template(input):
-```
+**Template(input):**
+```html
 <div sml-loop="data/filename.xlsx/sheetname">
     <div sml-item="">
         <div sml-html="data/タイトル">sample1-title</div>
@@ -130,8 +130,8 @@ Template(input):
 </div>
 ```
 
-Public(output):
-```
+**Public(output):**
+```html
 <div sml-loop="data/filename.xlsx/sheetname">
     <div sml-item="">
         <div sml-html="data/タイトル">title1</div>
@@ -148,12 +148,12 @@ Public(output):
 
 要素の値が正の場合のみ表示する
 
-Template(input):
-```
+**Template(input):**
+```html
 <div sml-if="data/false"> // falseは既存定数で予約後です
 ```
 
-Public(output):
+**Public(output):**
 ```
 (非表示)
 ```
@@ -166,13 +166,13 @@ Public(output):
 
 ページ内で変数のルート領域 `data/***`  にセットする
 
-Template(input):
-```
+**Template(input):**
+```html
 <meta sml-define="page_cat" sml-define-value="all" />
 ```
 
-Public(output):
-```
+**Public(output):**
+```html
 <meta sml-define="page_cat" sml-define-value="all" />
 （data/page_cat）に値（all）がセットされる
 ```
@@ -181,9 +181,9 @@ Public(output):
 
 ページネーション（ページ機能）を実施する
 
-Template(input):
+**Template(input):**
 pagename_[page].html
-```
+```html
 <meta sml-pagination-src="data/filename.xlsx/sheetname" sml-pagination-page-cnt="5">
 
 <div sml-loop="data/filename.xlsx/sheetname">
@@ -206,8 +206,8 @@ pagename_[page].html
 
 ※Template側を編集するので注意
 
-Template(input):
-```
+**Template(input):**
+```html
 <!-- #sml-include-pagename.html/key -->
 ....
 <!-- #/sml-include-pagename.html/key -->
