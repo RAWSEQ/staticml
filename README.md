@@ -28,9 +28,25 @@ npm install
 npm run staticml
 ```
 
+## パッケージ化
+
+予めnpmの pkgをインストールしておく
+
+```
+npm run pkg
+```
+
+- staticml-linux (LINUX用)
+- staticml-macos (MAC用)
+- staticml-win.exe (Windows用)
+
+のファイルが出力されるので各々を配布する。
+
 ## フォルダ構成
 
 ### /data
+
+入力。データファイルを配置する
 
 Excel(xlsx), json, yml 対応
 
@@ -40,7 +56,7 @@ Excel(filename.xlsx)でヘッダーを「key, value」とした場合、 `data/f
 
 ### /template
 
-入力。元となるhtmlテンプレートをセットする
+入力。元となるhtmlテンプレートを配置する
 
 ### /pubilc
 
