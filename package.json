@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "csv": "^5.5.0",
-    "jsdom": "^15.2.0",
+    "jsdom": "^16.5.0",
     "mixme": ">=0.5.1",
     "node-notifier": ">=8.0.1",
     "recursive-readdir": "^2.2.2",
